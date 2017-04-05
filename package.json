@@ -10,7 +10,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "node timeStampMS.js"
+    "test": "node timeStampMS.js",
+	"start": "node timeStampMS.js"
   },
   "repository": {
     "type": "git",
