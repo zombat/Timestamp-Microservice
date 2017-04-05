@@ -1,6 +1,6 @@
 {
   "name": "timestamp-microservice-zombat",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Free Code Camp Timestamp Microservice API",
   "main": "timeStampMS.js",
   "dependencies": {
@@ -11,7 +11,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "node timeStampMS.js",
-	"start": "node timeStampMS.js"
+    "start": "node timeStampMS.js"
   },
   "repository": {
     "type": "git",
