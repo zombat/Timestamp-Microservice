@@ -26,4 +26,4 @@ app.get('*', function(httpRequest, httpResponse){
 	}
 });
 
-app.listen(80);
+app.listen(process.env.PORT);
