@@ -1,0 +1,29 @@
+{
+  "name": "timestamp-microservice-zombat",
+  "version": "1.0.1",
+  "description": "Free Code Camp Timestamp Microservice API",
+  "main": "timeStampMS.js",
+  "dependencies": {
+    "express": "^4.15.2",
+    "moment": "^2.18.1",
+    "strftime": "^0.10.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node timeStampMS.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zombat/Timestamp-Microservice.git"
+  },
+  "keywords": [
+    "FreeCodeCamp",
+    "node.js"
+  ],
+  "author": "Raymond Rizzo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zombat/Timestamp-Microservice/issues"
+  },
+  "homepage": "https://github.com/zombat/Timestamp-Microservice#readme"
+}
