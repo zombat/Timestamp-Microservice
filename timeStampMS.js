@@ -8,9 +8,10 @@ var express = require('express');
 var url = require('url');
 var app = express();
 var moment = require('moment');
+var fs = require('fs');
 
-app.get('*', function(httpRequest, httpResponse){
-	var timeObject = {'unix': 0, 'natural': 0};
+app.get('/*', function(httpRequest, httpResponse){
+	var timeObject = {'unix': 0, 'natural': 0 };
 	if(httpRequest.url.match(/[A-Z]{0,}[a-z]{0,}%20\d{1,2},%20\d{4}/)){	
 		var naturalDate = httpRequest.url.match(/([A-Z]{0,}[a-z]{0,})%20(\d{1,2}),%20(\d{4})/);
 		timeObject.unix = moment(naturalDate[1] + naturalDate[2] + naturalDate[3],'MMMMDYYYY')/1000;
@@ -23,7 +24,14 @@ app.get('*', function(httpRequest, httpResponse){
 		timeObject.natural = moment(timeObject.unix, 'X').format('MMMM D, YYYY');
 		httpResponse.writeHead(200, { "Content-Type": "application/json" });
 		httpResponse.end(JSON.stringify(timeObject));
+	} else if (httpRequest.url === '/about/') {
+		//httpResponse.writeHead(200, { "Content-Type": "text/html" });
+		httpResponse.sendFile(__dirname + '/about.html');
+	} else {
+		httpResponse.writeHead(200, { "Content-Type": "application/json" });
+		httpResponse.end(JSON.stringify(timeObject));
 	}
+		
 });
 
 app.listen(process.env.PORT);
