@@ -34,5 +34,4 @@ app.get('/*', function(httpRequest, httpResponse){
 		
 });
 
-app.listen(8081);
-//app.listen(process.env.PORT);
+app.listen(process.env.PORT);
